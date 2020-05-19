@@ -1,0 +1,35 @@
+<!--節點-->
+<launch>
+<!--第一顆超音波-->
+ <node pkg = "armcar" name = "UltraSonic_Talker_First_Node" type = "pub2.py" output = "screen"> 
+ <!--專案資料夾：armcar 欲啟動節點的節點名稱：UltraSonic_Talker_First_Node  欲啟動節點的執行檔名稱：pub2.py 輸出目標：screen(終端機顯示)-->
+  <param name = "my_topic" type = "str" value = "UltraSonic_Talker_First" />
+  <!--參數名稱：my_topic  參數類型：str 參數值：UltraSonic_Talker_First-->
+  <param name = "GPIO_TRIGGER" type = "int" value = "23" /> <!--第一顆超音波Triggr腳位設定為GPIO：23-->
+  <param name = "GPIO_ECHO" type = "int" value = "24" />    <!--第一顆超音波Echo腳位設定為GPIO：24-->
+ </node>
+
+ <!--第二顆超音波-->
+ <node pkg = "armcar" name = "UltraSonic_Talker_Second_Node" type = "pub2.py" output = "screen">
+ <!--專案資料夾：armcar 欲啟動節點的節點名稱：UltraSonic_Talker_Second_Node  欲啟動節點的執行檔名稱：pub2.py 輸出目標：screen(終端機顯示)-->
+  <param name = "my_topic" type = "str" value = "UltraSonic_Talker_Second" />
+  <!--參數名稱：my_topic  參數類型：str 參數值：UltraSonic_Talker_Second-->
+  <param name = "GPIO_TRIGGER" type = "int" value = "14" /> <!--第二顆超音波Triggr腳位設定為GPIO：14-->
+  <param name = "GPIO_ECHO" type = "int" value = "15" />    <!--第二顆超音波Triggr腳位設定為GPIO：15-->
+ </node>
+
+ <!--第三顆超音波-->
+ <node pkg = "armcar" name = "UltraSonic_Talker_Third_Node" type = "pub2.py" output = "screen">
+ <!--專案資料夾：armcar 欲啟動節點的節點名稱：UltraSonic_Talker_Third_Node  欲啟動節點的執行檔名稱：pub2.py 輸出目標：screen(終端機顯示)-->
+  <param name = "my_topic" type = "str" value = "UltraSonic_Talker_Third" />
+  <!--參數名稱：my_topic  參數類型：str 參數值：UltraSonic_Talker_Third-->
+  <param name = "GPIO_TRIGGER" type = "int" value = "20" /> <!--第三顆超音波Triggr腳位設定為GPIO：20-->
+  <param name = "GPIO_ECHO" type = "int" value = "21" />    <!--第三顆超音波Triggr腳位設定為GPIO：21-->
+ </node>
+
+</launch>
+
+
+
+
+
