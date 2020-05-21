@@ -66,32 +66,32 @@ class listener(object):
 			#當車頭與前方牆面距離大於等於10公分 且 車頭右側與右側牆面距離大於等於8公分 且 車子右側中間位置與右側牆面距離大於等於8公分 時，執行下面動作
 			turnright()							#右轉
 			print("1")							#印出狀態"1"
-		elif self.distance1 >= 10 and self.distance1 < 50 and  self.distance2 >= 8 and self.distance3 <= 8:
-			#當車頭與前方牆面距離介於10至49公分 且 車頭右側與右側牆面距離大於等於8公分 且 車子右側中間位置與右側牆面距離小於等於8公分 時，執行下面動作
+		elif self.distance1 >= 10 and self.distance1 < 50 and  self.distance2 >= 8 and self.distance3 < 8:
+			#當車頭與前方牆面距離介於10至49公分 且 車頭右側與右側牆面距離大於等於8公分 且 車子右側中間位置與右側牆面距離小於8公分 時，執行下面動作
 			turnright()							#右轉
 			print("2")							#印出狀態"2"
-		elif self.distance1 >= 10 and self.distance2 <= 8 and self.distance3 <= 8:
-			#當車頭與前方牆面距離大於等於10公分 且 車頭右側與右側牆面距離小於等於8公分 且 車子右側中間位置與右側牆面距離小於等於8公分 時，執行下面動作
+		elif self.distance1 >= 10 and self.distance2 < 8 and self.distance3 < 8:
+			#當車頭與前方牆面距離大於等於10公分 且 車頭右側與右側牆面距離小於8公分 且 車子右側中間位置與右側牆面距離小於8公分 時，執行下面動作
 			turnleft()							#左轉
 			print("3")							#印出狀態"3"
-		elif self.distance1 >= 10 and self.distance2 <= 8 and self.distance3 >= 8:
-			#當車頭與前方牆面距離大於等於10公分 且 車頭右側與右側牆面距離小於等於8公分 且 車子右側中間位置與右側牆面距離大於等於8公分 時，執行下面動作
+		elif self.distance1 >= 10 and self.distance2 < 8 and self.distance3 >= 8:
+			#當車頭與前方牆面距離大於等於10公分 且 車頭右側與右側牆面距離小於8公分 且 車子右側中間位置與右側牆面距離大於等於8公分 時，執行下面動作
 			turnleft()							#左轉
 			print("4")							#印出狀態"4"
-		elif self.distance1 >= 50 and self.distance2 >= 8 and self.distance3 <= 8:
-			#當車頭與前方牆面距離大於等於50公分 且 車頭右側與右側牆面距離大於等於8公分 且 車子右側中間位置與右側牆面距離小於等於8公分 時，執行下面動作
+		elif self.distance1 >= 50 and self.distance2 >= 8 and self.distance3 < 8:
+			#當車頭與前方牆面距離大於等於50公分 且 車頭右側與右側牆面距離大於等於8公分 且 車子右側中間位置與右側牆面距離小於8公分 時，執行下面動作
 			forward()							#直走
 			print("4.5")						#印出狀態"4.5"
-		elif self.distance1 <= 10 and self.distance2 >= 8 and self.distance3 <= 8:
-			#當車頭與前方牆面距離小於等於10公分 且 車頭右側與右側牆面距離大於等於8公分 且 車子右側中間位置與右側牆面距離小於等於8公分 時，執行下面動作
+		elif self.distance1 < 10 and self.distance2 >= 8 and self.distance3 < 8:
+			#當車頭與前方牆面距離小於10公分 且 車頭右側與右側牆面距離大於等於8公分 且 車子右側中間位置與右側牆面距離小於8公分 時，執行下面動作
 			turnleft()							#左轉
 			print("5")							#印出狀態"5"
-		elif self.distance1 <= 10 and self.distance2 <= 8 and self.distance3 >= 8:
-			#當車頭與前方牆面距離小於等於10公分 且 車頭右側與右側牆面距離小於等於8公分 且 車子右側中間位置與右側牆面距離大於等於8公分 時，執行下面動作
+		elif self.distance1 < 10 and self.distance2 < 8 and self.distance3 >= 8:
+			#當車頭與前方牆面距離小於10公分 且 車頭右側與右側牆面距離小於8公分 且 車子右側中間位置與右側牆面距離大於等於8公分 時，執行下面動作
 			turnleft()							#左轉
 			print("6")							#印出狀態"6"
-		elif self.distance1 <= 10 and self.distance2 >= 8 and self.distance3 >= 8:
-			#當車頭與前方牆面距離小於等於10公分 且 車頭右側與右側牆面距離大於等於8公分 且 車子右側中間位置與右側牆面距離大於等於8公分 時，執行下面動作
+		elif self.distance1 < 10 and self.distance2 >= 8 and self.distance3 >= 8:
+			#當車頭與前方牆面距離小於10公分 且 車頭右側與右側牆面距離大於等於8公分 且 車子右側中間位置與右側牆面距離大於等於8公分 時，執行下面動作
 			backward()							#倒退
 			time.sleep(0.3)						#0.3秒
 			turnleft()							#左轉
@@ -99,8 +99,8 @@ class listener(object):
 			forward()							#直走
 			time.sleep(0.1)						#0.1秒
 			print("7")							#印出狀態"7"
-		elif self.distance1 <= 10 and self.distance2 <= 8 and self.distance3 <= 8:
-			#當車頭與前方牆面距離小於等於10公分 且 車頭右側與右側牆面距離小於等於8公分 且 車子右側中間位置與右側牆面距離小於等於8公分 時，執行下面動作
+		elif self.distance1 < 10 and self.distance2 < 8 and self.distance3 < 8:
+			#當車頭與前方牆面距離小於10公分 且 車頭右側與右側牆面距離小於8公分 且 車子右側中間位置與右側牆面距離小於8公分 時，執行下面動作
 			backward()							#倒退
 			time.sleep(0.3)						#0.3秒
 			turnleft()							#左轉
